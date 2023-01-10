@@ -22,6 +22,8 @@ Scripts from [package.json](./package.json)
 - Watch for changes in your TypeScript code: `npm run watch`
 - Clean your TypeScript project: `npm run clean`
 
+You will find the compiled code 
+
 ## Local Test-Server
 
 Node.js Server, source code: [/server/server.js](./server/server.js)
