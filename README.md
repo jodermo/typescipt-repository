@@ -22,7 +22,7 @@ Scripts from [package.json](./package.json)
 - Watch for changes in your TypeScript code: `npm run watch`
 - Clean your TypeScript project: `npm run clean`
 
-You will find the compiled code 
+*After compilation, you will find your compiled code in the [/build/](./build/) directory;*
 
 ## Local Test-Server
 
