@@ -1,0 +1,44 @@
+{
+  "name": "typescipt-repository",
+  "version": "1.0.0",
+  "description": "WebXR module for Three.js",
+  "type": "module",
+  "main": "./build/src/ThreeXr.js",
+  "scripts": {
+    "start": "npm run server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npx tsc -w",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm.cmd run compile",
+    "pretest": "npm.cmd run compile",
+    "posttest": "npm.cmd run lint",
+    "server": "npm run compile && node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jodermo/typescipt-repository.git"
+  },
+  "keywords": [
+    "TypeScript",
+    "Compiler",
+    "Node.js",
+    "Development",
+    "Deployment"
+  ],
+  "author": "Moritz Petzka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jodermo/typescipt-repository/issues"
+  },
+  "homepage": "https://github.com/jodermo/typescipt-repository#readme",
+  "devDependencies": {
+    "@types/node": "^14.11.2",
+    "function-bind": "^1.1.1",
+    "gts": "^3.1.1",
+    "http": "^0.0.1-security",
+    "typescript": "~4.7.0"
+  }
+}

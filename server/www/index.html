@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TypeScript Example</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+  <style>
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial;
+    }
+
+    body {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+    }
+
+    #loadingScreen {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      pointer-events: all;
+      background: rgba(0, 0, 0, 1);
+      color: white;
+
+      transition: all .25s ease;
+    }
+
+    #loadingScreen.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #loadingScreen b {
+      width: 100%;
+      text-align: center;
+    }
+
+    #exampleContent {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      background: rgba(200, 200, 200, 1);
+      color: black;
+    }
+
+    #exampleContent h1 {
+      width: 100%;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- uncomment this, to declare additional Node.js packages
+<script type="importmap">
+        {
+           "imports": {
+               "package-name": "./node_modules/package-name/build/package-name.min.js"
+           }
+        }
+</script>
+-->
+
+<div id="exampleContent">
+  <h1>Hello World</h1>
+</div>
+<div id="loadingScreen">
+  <b>loading...</b>
+</div>
+<script type="module">
+
+  // import MyTypeScriptClass
+  import {MyTypeScriptClass} from '/src/MyTypeScriptClass/MyTypeScriptClass.js';
+
+  // get the div with the id "exampleContent"
+  const exampleContent = document.getElementById('exampleContent');
+
+  // get the div with the id "loadingScreen"
+  const loadingScreen = document.getElementById('loadingScreen');
+
+  // generate MyTypeScriptComponent (and add exampleContent and loadingScreen to the constructor)
+  const MyTypeScriptComponent = new MyTypeScriptClass(exampleContent, loadingScreen);
+
+  // MyTypeScriptClass ready callback, triggered when the Module is ready loaded
+  MyTypeScriptComponent.on('ready', () => {
+    // Add "hidden" class to the loadingScreen to fade it out
+    loadingScreen.classList.add('hidden');
+  });
+
+  // log MyTypeScriptComponent in the development console
+  console.log('MyTypeScriptComponent', MyTypeScriptComponent);
+
+</script>
+</body>
+</html>
