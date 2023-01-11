@@ -1,4 +1,8 @@
-# A clean starter repository for TypeScript projects
+# keep it simple!
+
+## A clean starter repository for TypeScript projects
+
+
 
 #### This repository contains basic stuff for to start an TypeScript project.
 
@@ -121,7 +125,7 @@ export class MyTypeScriptClass {
 }
 
 ```
-Index.html file: [/server/index.html](./src/MyTypeScriptClass/MyTypeScriptClass.ts)
+MyTypeScriptClass.ts file: [/src/MyTypeScriptClass/MyTypeScriptClass.ts](./src/MyTypeScriptClass/MyTypeScriptClass.ts)
 
 ### Usement of compiled code in HTML:
 ```html
